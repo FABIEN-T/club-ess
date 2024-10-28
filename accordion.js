@@ -12,29 +12,93 @@
 const accordionBtns = document.querySelectorAll(".accordion");
 
 accordionBtns.forEach((accordion) => {
-  accordion.onclick = function () {
-    this.classList.toggle("is-open");
-    // this.classList.remove("arrow-down");
-    // this.classList.add("arrow-up")
+  
+  accordion.onclick = function () {    
+    accordion.classList.toggle("is-open");
+    accordion.classList.remove("arrow-down");
+    accordion.classList.add("arrow-up")
 
-    let content = this.nextElementSibling;
-    // console.log(content);
-
-    if (content.style.maxHeight) {
-      //this is if the accordion is open
+    let content = accordion.nextElementSibling;
+    
+    if (content.style.maxHeight) {  
+      //accordion is if the accordion is open
       content.style.maxHeight = null;
-      this.classList.remove("arrow-up");
-      this.classList.add("arrow-down");   
+      accordion.classList.remove("arrow-up");  
+      accordion.classList.add("arrow-down");   
     } else {
       //if the accordion is currently closed
       content.style.maxHeight = content.scrollHeight + "px";
-      
-      this.classList.remove("arrow-down");
-      this.classList.add("arrow-up")
+      accordion.classList.remove("arrow-down");
+      accordion.classList.add("arrow-up")
 
       console.log(content.style.maxHeight);
     }
-
-    
   };
 });
+
+// accordionBtns.forEach((accordion) => {
+  
+//   accordion.onclick = function () {
+//     // initialisation   
+//     // accordionBtns.forEach(accBtn => {      
+//     //   let content = accBtn.nextElementSibling;
+//     //   if ( accBtn.classList.contains("is-open") ) {
+//     //     accBtn.classList.remove("arrow-up");
+//     //     accBtn.classList.add("arrow-down");        
+//     //     content.style.maxHeight = null;
+//     //     accBtn.classList.toggle("is-open");
+//     //   }
+//     // })
+    
+//     this.classList.toggle("is-open");
+//     this.classList.remove("arrow-down");
+//     this.classList.add("arrow-up")
+
+//     let content = this.nextElementSibling;
+    
+//     if (content.style.maxHeight) {  
+//       //this is if the accordion is open
+//       content.style.maxHeight = null;
+//       this.classList.remove("arrow-up");  
+//       this.classList.add("arrow-down");   
+//     } else {
+//       //if the accordion is currently closed
+//       content.style.maxHeight = content.scrollHeight + "px";
+//       this.classList.remove("arrow-down");
+//       this.classList.add("arrow-up")
+
+//       console.log(content.style.maxHeight);
+//     }
+//   };
+// });
+
+// accordionBtns.forEach(accordionBtn => {
+//   accordionBtn.addEventListener("click", (e) => {
+//     let content = accordionBtn.nextElementSibling;
+//     if (accordionBtn.classList.contains("open")) {
+//       console.log("hey0");
+//       accordionBtns.forEach(a => {
+//         let c = accordionBtn.nextElementSibling;
+//         a.classList.remove("open");        
+//         a.classList.remove("arrow-up");
+//         a.classList.add("arrow-down");
+//         c.style.maxHeight = null;
+        
+//       })
+//       accordionBtn.classList.remove("open");
+//       accordionBtn.classList.add("arrow-down");
+//       accordionBtn.classList.remove("arrow-up");
+//       // console.log("hey");      
+//       content.style.maxHeight = null;
+//       console.log("if", content.style.maxHeight);
+      
+//     } else {
+//       console.log("hey2");
+//       accordionBtn.classList.add("open");      
+//       accordionBtn.classList.add("arrow-up");
+//       accordionBtn.classList.remove("arrow-down");
+//       content.style.maxHeight = content.scrollHeight + "px";
+//       console.log(content.style.maxHeight);
+//     }
+//   })
+// })

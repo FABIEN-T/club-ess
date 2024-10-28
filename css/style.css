@@ -112,7 +112,7 @@ li {
   
 }
 
-.ess {
+.card {
   display: flex;  
   flex-direction: column;  
   justify-content: center;
@@ -174,15 +174,15 @@ ul {
   margin-bottom: 4px;
 }
 
-/* .accordion-content h3 {
+/* .accordion-content h2 {
   text-align: center;
 } */
 
-.accordion-content h3, .accordion-content h4 {
+.accordion-content h2, .accordion-content h3 {
   margin-block: 8px;  
 }
 
-.accordion-content h3, .accordion-content h4 {
+.accordion-content h2, .accordion-content h3 {
   margin-block: 8px;  
   font-size: clamp(13px, 2vw, 16px);
 }
@@ -213,7 +213,7 @@ button.accordion {
   /* color: #333; */
   color: black;
   cursor: pointer;
-  transition: background-color 0.3s linear;  
+  /* transition: background-color 0.3s linear;   */
 }
 
 /* button.accordion:hover,
@@ -245,6 +245,12 @@ button.accordion.is-open {
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
 }
+
+/* button.accordion.open > .accordion-content {
+  max-height: fit-content;
+  overflow: hidden;
+  transition: 0 0.4s ease-in-out;
+} */
 
 h2.h2-delta {
   font-size: clamp(1em, 3vw, 3em);
